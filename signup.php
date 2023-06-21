@@ -206,7 +206,7 @@ body {
       }
       ?>
 
-      <section class="container">>
+      <section class="container">
       <header>registration form</header>
       <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post">
         <div class="input-box">

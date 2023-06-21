@@ -1,182 +1,719 @@
 <?php
 ?>
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camping Gear Website | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <h2 class="logo"><a href="#">LOGO</a></h2>
-        <input type="checkbox" id="menu-toggler">
-        <label for="menu-toggler" id="hamburger-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
-          </svg>
-        </label>
-        <ul class="all-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+<html>
+<head>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background: black;
+}
+.heading ul {
+  display: flex;
+}
+.logo a {
+  color: white;
+  transition-duration: 1s;
+  font-weight: 800;
+}
+.logo a:hover {
+  color: rgb(240, 197, 6);
+  transition-duration: 1s;
+}
+.heading ul li {
+  list-style: none;
+}
+.heading ul li a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+.heading ul li a:active {
+  color: red;
+}
+.heading ul li a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 1s;
+}
 
-    <section class="homepage" id="home">
-      <div class="content">
-        <div class="text">
-          <h1>Camping Gear and Essentials</h1>
-          <p>
-            back to nature . <br> Gear up and make lasting memories.</p>
-        </div>
-        <a href="#services">Our Services</a>
-      </div>
-    </section>
+.heading ul li a::before {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+.heading ul li a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(243, 168, 7);
+}
+#input {
+  height: 30px;
+  width: 300px;
+  text-decoration: none;
+  border: 0px;
+  padding: 5px;
+}
+.logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: none;
+}
+ion-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+}
+ion-icon:hover {
+  cursor: pointer;
+}
+.search a {
+  display: flex;
+}
+header a ion-icon {
+  position: relative;
+  right: 3px;
+}
 
-    <section class="services" id="services">
-      <h2>Our Services</h2>
-      <p>Explore our wide range of camping gear services.</p>
-      <ul class="cards">
-        <li class="card">
-          <img src="images/tents.jpg" alt="img">
-          <h3>Tents</h3>
-          <p>Experience comfort and protection with our high-quality camping tents.</p>
-        </li>
-        <li class="card">
-          <img src="images/bags.jpg" alt="img">
-          <h3>Sleeping Bags</h3>
-          <p>Stay cozy and warm during your camping trips with our premium sleeping bags.</p>
-        </li>
-        <li class="card">
-          <img src="images/stoves.jpg" alt="img">
-          <h3>Camp Stoves</h3>
-          <p>Cook delicious meals in the great outdoors with our reliable camp stoves.</p>
-        </li>
-        <li class="card">
-          <img src="images/backpacks.jpg" alt="img">
-          <h3>Backpacks</h3>
-          <p>Carry your essentials comfortably with our durable and functional camping backpacks.</p>
-        </li>
-        <li class="card">
-          <img src="images/chair.jpg" alt="img">
-          <h3>Camp Chairs</h3>
-          <p>Relax and unwind in style with our comfortable and portable camping chairs.</p>
-        </li>
-        <li class="card">
-          <img src="images/light.jpg" alt="img">
-          <h3>Camp Lights</h3>
-          <p>Illuminate your campsite with our reliable and energy-efficient camping lights.</p>
-        </li>
+.img-slider img {
+  height: 720px;
+  width: 1080px;
+}
+@keyframes slide {
+  0% {
+    left: 0px;
+  }
+  15% {
+    left: 0px;
+  }
+  20% {
+    left: -1080px;
+  }
+  32% {
+    left: -1080px;
+  }
+  35% {
+    left: -2160px;
+  }
+  47% {
+    left: -2160px;
+  }
+  50% {
+    left: -3240px;
+  }
+  63% {
+    left: -3240px;
+  }
+  66% {
+    left: -4320px;
+  }
+  79% {
+    left: -4320px;
+  }
+  82% {
+    left: -5400px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.img-slider {
+  display: flex;
+  float: left;
+  position: relative;
+  width: 1080px;
+  height: 720px;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transition-duration: 2s;
+}
+
+.heading1 {
+  opacity: 0;
+}
+.search {
+  display: flex;
+  position: relative;
+}
+.section1 {
+  width: 1080px;
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+
+.section2 .container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+}
+.section2 .container .items {
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 12px;
+}
+.section2 .container .items .name {
+  text-align: center;
+  background-color: rgb(240, 197, 6);
+  height: 25px;
+  padding-top: 4px;
+  color: white;
+  margin: 0;
+}
+.section2 .container .items .price {
+  float: left;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-weight: 650;
+}
+.section2 .container .items .info {
+  padding-left: 10px;
+  color: rgb(243, 168, 7);
+}
+.section2 .container .items .img img {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+}
+.section2 .container .items .img {
+  overflow: hidden;
+  margin: 0;
+}
+.section2 .container .items:hover .img img {
+  transform: scale(1.2);
+  transition-duration: 0.8s;
+  border-radius: 12px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  color: white;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 15px;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.social-media a {
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+}
+.social-media a ion-icon {
+  color: white;
+  background-color: black;
+}
+.social-media a:hover ion-icon {
+  color: red;
+  transform: translateY(5px);
+}
+.footer2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+.footer0 {
+  font-weight: 1200;
+  transition-duration: 1s;
+}
+.footer0:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .heading {
+  font-weight: 900;
+  font-size: 18px;
+}
+.footer3 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer2 .heading:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .div:hover {
+  transform: scale(1.05);
+}
+.footer3 h4 {
+  margin: 0 10px;
+}
+.footer2 div {
+  margin: 10px;
+}
+.menu {
+  visibility: hidden;
+}
+.heading1 .ham:active {
+  color: red;
+}
+.items {
+  overflow: hidden;
+}
+.ham,
+.close {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .heading ul li {
+    display: none;
+  }
+
+  .items {
+    transform: scale(0.9);
+  }
+  .img-slider img {
+    height: 60vw;
+    width: 80vw;
+  }
+  .ham:active {
+    color: red;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a ion-icon {
+    position: absolute;
+  }
+
+  @keyframes slide1 {
+    0% {
+      left: 0vw;
+    }
+    15% {
+      left: 0vw;
+    }
+    20% {
+      left: -80vw;
+    }
+    32% {
+      left: -80vw;
+    }
+    35% {
+      left: -160vw;
+    }
+    47% {
+      left: -160vw;
+    }
+    50% {
+      left: -240vw;
+    }
+    63% {
+      left: -240vw;
+    }
+    66% {
+      left: -320vw;
+    }
+    79% {
+      left: -320vw;
+    }
+    82% {
+      left: -400vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  .close {
+    z-index: 34;
+
+    color: white;
+    background-color: black;
+  }
+  .close:active {
+    color: red;
+  }
+  .menu ul li {
+    list-style: none;
+    margin: 20px;
+    border-top: 3px solid white;
+    width: 80%;
+    text-align: center;
+
+    padding-top: 10px;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+    font-weight: 900;
+  }
+  .menu ul li a:hover {
+    color: rgb(240, 197, 6);
+  }
+  .img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 80%;
+    height: 60%;
+    animation-name: slide1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+  }
+  .section1 {
+    width: 80%;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
+
+  .heading1 {
+    opacity: 1;
+    position: relative;
+    bottom: 8px;
+  }
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .heading1 .ham {
+    background-color: black;
+    color: white;
+  }
+  #input {
+    width: 200px;
+    flex-shrink: 2;
+  }
+  header {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .heading ul li {
+    display: none;
+  }
+  .heading1 {
+    opacity: 1;
+
+    bottom: 8px;
+  }
+
+  header {
+    height: 250px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  #input {
+    width: 150px;
+  }
+  .close {
+    z-index: 34;
+  }
+
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+    </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="#">fouzii shopping zone</a></div>
+    <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="homeproducts.php" class="under">OUR PRODUCTS</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
       </ul>
-    </section>
+    </div>
+    <div class="search">
 
-    <section class="portfolio" id="portfolio">
-      <h2>Our Portfolio</h2>
-      <p>Take a look at some of our memorable camping adventures.</p>
-      <ul class="cards">
-        <li class="card">
-          <img src="images/camping-1.jpg" alt="img">
-          <h3>Mountain Hiking</h3>
-          <p>over the rivers and through the woods.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-2.jpg" alt="img">
-          <h3>Lakeside Camping</h3>
-          <p>Enjoy a tranquil camping experience by the serene shores of picturesque lakes.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-3.jpg" alt="img">
-          <h3>Beach Camping</h3>
-          <p>Escape to sandy beaches and camp under the starry sky by the crashing waves.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-4.jpg" alt="img">
-          <h3>Forest Exploration</h3>
-          <p>Discover the wonders of lush forests and immerse yourself in nature's beauty.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-5.jpg" alt="img">
-          <h3>RV Camping</h3>
-          <p>Experience the freedom of road trips and camping adventures with our RV rentals.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-6.jpg" alt="img">
-          <h3>Desert Camping</h3>
-          <p>Embark on a unique desert camping experience and witness stunning landscapes.</p>
-        </li>
+      <a href=""><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="homeproducts.php" class="under">OUR PRODUCTS</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="login.php" class="under">LOGIN</a></li>
       </ul>
-    </section>
-
-    <section class="about" id="about">
-      <h2>About Us</h2>
-      <p>Discover our story in providing camping services.</p>
-      <div class="row company-info">
-        <h3>Our Story</h3>
-        <p>Experience the excellence of our camping gear and services, where we have been offering high-quality camping essentials and gear for outdoor enthusiasts for over a decade. Our commitment to quality and customer satisfaction ensures that every adventurer can rely on us for their camping needs.</p>
-      </div>
-      <div class="row mission-vision">
-        <h3>Our Mission</h3>
-        <p>At Camping Gear Experts, our mission is to equip outdoor enthusiasts with top-notch camping gear and essentials that enhance their outdoor experiences. We strive to provide reliable, durable, and innovative products that contribute to memorable adventures and lasting memories.</p>
-        <h3>Our Vision</h3>
-        <p>Our vision is to become the go-to destination for camping enthusiasts, known for our extensive selection of premium camping gear and exceptional customer service. We aspire to inspire and enable people to embrace the beauty of nature and create unforgettable camping experiences.</p>
-      </div>
-      <div class="row team">
-        <h3>Our Team</h3>
-        <ul>
-          <li>John Doe - Founder and CEO</li>
-          <li>Jane Smith - Gear Specialist</li>
-          <li>Mark Johnson - Customer Representative</li>
-          <li>Sarah Brown - Operations Manager</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2>Contact Us</h2>
-      <p>Reach out to us for any inquiries or feedback.</p>
-      <div class="row">
-        <div class="col information">
-          <div class="contact-details">
-            <p><i class="fas fa-map-marker-alt"></i> 123 Campsite Avenue, Wilderness, CA 98765</p>
-            <p><i class="fas fa-envelope"></i> info@campinggearexperts.com</p>
-            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-            <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-            <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
-            <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-            <p><i class="fas fa-globe"></i> www.codingnepalweb.com</p>
-          </div>          
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+  <section>
+    <div class="section">
+      <div class="section1">
+        <div class="img-slider">
+          <img src="https://images.pexels.com/photos/6347888/pexels-photo-6347888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+          <img src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+          <img src="https://images.pexels.com/photos/2292953/pexels-photo-2292953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="img">
+          <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+          <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
         </div>
-        <div class="col form">
-          <form>
-            <input type="text" placeholder="Name*" required>
-            <input type="email" placeholder="Email*" required>
-            <textarea placeholder="Message*" required></textarea>
-            <button id="submit" type="submit">Send Message</button>
-          </form>
+
+      </div>
+      <div class="section2">
+        <div class="container">
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">SHOES</div>
+            <div class="price">$5</div>
+            <div class="info">Bring power to your steps.</div>
+          </div>
+          <div class="items">
+            <div class="img img2"><img src="https://images.pexels.com/photos/3649765/pexels-photo-3649765.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+            <div class="name">MEN's T-SHIRT</div>
+            <div class="price">$6.34</div>
+            <div class="info">feel free to feel lucky.</div>
+          </div>
+          <div class="items">
+            <div class="img img3"><img src="https://media.istockphoto.com/photos/folded-blue-jeans-on-a-white-background-modern-casual-clothing-flat-picture-id1281304280" alt=""></div>
+            <div class="name">JEANS</div>
+            <div class="price">$9</div>
+            <div class="info">Making Stylist Every mankind.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/8839887/pexels-photo-8839887.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">WATCH</div>
+            <div class="price">$9.1</div>
+            <div class="info">Making your time valuable.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/6858618/pexels-photo-6858618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">SMART PHONE</div>
+            <div class="price">$20</div>
+            <div class="info">The future of communication.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/5552789/pexels-photo-5552789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">TELEVISION</div>
+            <div class="price">$18</div>
+            <div class="info">Entertainment is Life to Live.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+            <div class="name">HOODIES</div>
+            <div class="price">$6.7</div>
+            <div class="info">Stay warm and stylish with our Hoodies.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://media.istockphoto.com/photos/vintage-plates-with-silver-teaspoons-picture-id184363070" alt=""></div>
+            <div class="name">DINNER SET</div>
+            <div class="price">$10</div>
+            <div class="info">Serve your food with class.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/6463348/pexels-photo-6463348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+            <div class="name">BLANKETS</div>
+            <div class="price">$9.9</div>
+            <div class="info">Making you enjoy your sleep .</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+            <div class="name">LAPTOP</div>
+            <div class="price">$99</div>
+            <div class="info">Think Fast. Work Smart. Have Fun.Your key to running a business.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://media.istockphoto.com/photos/modern-kitchen-microwave-oven-picture-id1144960519" alt=""></div>
+            <div class="name">MICROWAVE</div>
+            <div class="price">$30</div>
+            <div class="info">Heat up your life with our microwaves!.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://media.istockphoto.com/photos/black-coffee-maker-with-green-led-lights-picture-id177395430" alt=""></div>
+            <div class="name">COFFEE MAKER</div>
+            <div class="price">$29.7</div>
+            <div class="info">It's a new morning. Brew some good.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/6606354/pexels-photo-6606354.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+            <div class="name">BED</div>
+            <div class="price">$100</div>
+            <div class="info">Sleep as you deserv,Love your bedtime.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://media.istockphoto.com/photos/woman-turning-on-air-conditioner-picture-id1325708905" alt=""></div>
+            <div class="name">AIR CONDITIONER</div>
+            <div class="price">$78</div>
+            <div class="info">A better life, a better world..</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/5834/nature-grass-leaf-green.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">BOOK</div>
+            <div class="price">$9</div>
+            <div class="info">Life is nothing without books.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/4339598/pexels-photo-4339598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">BAG</div>
+            <div class="price">$36.5</div>
+            <div class="info">“Live Colorfully.”.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://media.istockphoto.com/photos/hand-of-a-lady-selecting-yellow-colored-saree-in-a-shop-picture-id1301740530" alt=""></div>
+            <div class="name">SAREES</div>
+            <div class="price">$25.6</div>
+            <div class="info">My love for this timeless beauty is never-ending!.</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://images.pexels.com/photos/5816934/pexels-photo-5816934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
+            <div class="name">WASHING MACHINE</div>
+            <div class="price">$56</div>
+            <div class="info">Feel good about how you look..</div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <footer>
-      <div>
-        <span>Copyright © 2023 All Rights Reserved</span>
-        <span class="link">
-            <a href="#">Home</a>
-            <a href="#contact">Contact</a>
-        </span>
       </div>
-    </footer>
+    </div>
 
-  </body>
+  </section>
+  <footer>
+    <div class="footer0">
+      <h1>Fouzii shopping zone</h1>
+    </div>
+    <div class="footer1 ">
+      Connect with us at<div class="social-media">
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+    <div class="footer3">Copyright © <h4>Fouzii shopping zone</h4> 2021-2028</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  
+</body>
+<script>
+const close = document.querySelector(".close");
+const open = document.querySelector(".ham");
+const menu = document.querySelector(".menu");
+close.addEventListener("click", () => {
+  menu.style.visibility = "hidden";
+});
+open.addEventListener("click", () => {
+  menu.style.visibility = "visible";
+});
+</script>
 </html>

@@ -7,7 +7,7 @@ session_start();
             <title>Login Form</title>
            
             <?php include'connect.php' ?>
-            <!-- <link rel="stylesheet" href="StyleLogin.css"> -->
+            <!-- <link rel="stylesheet" href="StyleLogin.css">  -->
       </head>
 <?php
 if(isset($_POST['submit'])){
@@ -21,6 +21,7 @@ if(isset($_POST['submit'])){
 
     if($email_count){
         $pass = mysqli_fetch_assoc($query);
+        $_SESSION['user_id'] = $pass['id'];
 
         if(md5($password) === $pass["password"])
         {
@@ -29,7 +30,7 @@ if(isset($_POST['submit'])){
                 alert("Successful")
             </script>
             <?php
-           
+           header("location: index.php");
         }
         else{
             ?>
@@ -79,12 +80,12 @@ if(isset($_POST['submit'])){
     </div>
     <div class="form-group d-flex">
           <h6>Don't have an account?</h6>
-          <a href="#">SignUp</a><br>
+          <a href="signup.php.">SignUp</a><br>
           
     </div>  
     <div >
-    <button class="footbtn"> <a href="#"> Forgot Password?</a></button>&nbsp;&nbsp;
-    <button class="footbtn"> <a href="#"> Change Password</a></button>
+    <button class="footbtn"> <a href="forgot.php"> Forgot Password?</a></button>&nbsp;&nbsp;
+    <button class="footbtn"> <a href="change.php"> Change Password</a></button>
     </div>
     </form>
 </div>
